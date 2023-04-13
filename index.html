@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>piano game</title>
+<style type="text/css">
+.piano{ margin-top:5%; position:relative; margin-left:10%;
+background-color:black;margin-right:10%; }
+.whites{
+  display:grid; width:100%; column-gap:-3px;
+  grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto ;
+}
+.whites{margin-left:-10px;}
+.white{
+  height:250px; width:77px; border-left:1px solid black;column-gap: 0px; 
+  background-color:#e6e6e6; text-align:center; border-radius:0 0 8px 8px; user-select:none;
+  align-items:flex-end; justify-content:center; display:flex; font-size:20px;
+}
+.black{ height:140px; width:50px; background-color:black; z-index:50;
+position:absolute; border-radius:0 0 8px 8px; top:0px;  color:white; user-select:none;
+display:flex; align-items:flex-end; justify-content:center; padding:2px;
+box-shadow: 2px 2px 8px rgba(0,0,0,0.5);}
+
+.cs{left:40px;}
+.ds{left:120px;}
+.fs{left:275px;}
+.gs{left:355px;}
+.as{left:430px;}
+.scs{left:585px;}
+.sds{left:665px;}
+
+.white:active { box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 -6px 20px 0 rgba(0, 0, 0, 0.19)inset;}
+.black:active { box-shadow:none; }
+
+.body{ background-color:black; width:92vw; height:301px; border-radius:0 0 30px 30px;
+position:absolute; top:0px; z-index:-1; margin-left:30px; margin-right:-30px;}
+</style>
+</head>
+<body bgcolor="#96542d" >
+ <div class="piano">
+   <div class="whites">
+     <div data-key="C" class="C white">C</div>
+     <div data-key="D" class="D white">D</div>
+     <div data-key="E" class="E white">E</div>
+     <div data-key="F" class="F white">F</div>
+     <div data-key="G" class="G white">G</div>
+     <div data-key="A" class="A white">A</div>
+     <div data-key="B" class="B white">B</div>
+     <div data-key="C2" class="sC white">C</div>
+     <div data-key="D2" class="sD white">D</div>
+     <div data-key="E2" class="sE white">E</div>
+     <div class="cs black" >C#</div>
+   	 <div class="ds black" data-key="D#">D#</div>
+   	 <div class="fs black" data-key="F#">F#</div>
+   	 <div class="gs black" data-key="G#">G#</div>
+   	 <div class="as black" data-key="A#">A#</div>
+   	 <div class="scs black" data-key="C2#">C#</div>
+   	 <div class="sds black" data-key="D2#">D#</div>
+   </div>
+ </div>
+</div>
+<div class="body"></div>
+<!--- audio --->
+<audio src="/storage/emulated/0/piano html css js/C.m4a" id="C"></audio>
+<audio src="/storage/emulated/0/piano html css js/D.m4a" id="D"></audio>
+<audio src="/storage/emulated/0/piano html css js/E.m4a" id="E"></audio>
+<audio src="/storage/emulated/0/piano html css js/F.m4a" id="F"></audio>
+<audio src="/storage/emulated/0/piano html css js/G.m4a" id="G"></audio>
+<audio src="/storage/emulated/0/piano html css js/A.m4a" id="A"></audio>
+<audio src="/storage/emulated/0/piano html css js/B.m4a" id="B"></audio>
+<audio src="/storage/emulated/0/piano html css js/sC.m4a" id="C2"></audio>
+<audio src="/storage/emulated/0/piano html css js/sD.m4a" id="D2"></audio>
+<audio src="/storage/emulated/0/piano html css js/sE.m4a" id="E2"></audio>
+<audio src="/storage/emulated/0/piano html css js/Cs.m4a" id="C#"></audio>
+<audio src="/storage/emulated/0/piano html css js/Ds.m4a" id="D#"></audio>
+<audio src="/storage/emulated/0/piano html css js/Fs.m4a" id="F#"></audio>
+<audio src="/storage/emulated/0/piano html css js/Gs.m4a" id="G#"></audio>
+<audio src="/storage/emulated/0/piano html css js/As.m4a" id="A#"></audio>
+<audio src="/storage/emulated/0/piano html css js/sCs.m4a" id="C2#"></audio>
+<audio src="/storage/emulated/0/piano html css js/sDs.m4a" id="D2#"></audio>
+
+<script type="text/javascript">
+//const pianoWkeys = document.querySelectorAll('.white div');
+//const pianoBkeys = document.querySelectorAll('.black div');
+   
+document.querySelector('.C').addEventListener('click',myfun=()=>{
+  let audio = document.getElementById('C');
+  audio.play()
+}) ;    
+document.querySelector('.D').addEventListener('click',myfun=()=>{
+  let audio = document.getElementById('D');
+  audio.play()
+}) ;  
+document.querySelector('.E').addEventListener('click',myfun=()=>{
+  let audio = document.getElementById('E');
+  audio.play()
+}) ;  
+document.querySelector('.F').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('F');
+   audio.play()
+ }) ;  
+document.querySelector('.G').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('G');
+   audio.play()
+ }) ;  
+document.querySelector('.A').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('A');
+   audio.play()
+}) ;  
+document.querySelector('.B').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('B');
+   audio.play()
+}) ;  
+document.querySelector('.sC').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('C2');
+   audio.play()
+}) ;  
+document.querySelector('.sD').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('D2');
+   audio.play()
+}) ;  
+document.querySelector('.sE').addEventListener('click',myfun=()=>{
+   let audio = document.getElementById('E2');
+   audio.play()
+}) ;  
+   
+document.querySelector('.cs').addEventListener('click', sfun=()=>{
+ let sound = document.getElementById('C#');
+ sound.play()
+}) 
+document.querySelector('.ds').addEventListener('click', sfun=()=>{
+   let sound = document.getElementById('D#');
+   sound.play() 
+}) 
+document.querySelector('.fs').addEventListener('click', sfun=()=>{
+ let sound = document.getElementById('F#');
+ sound.play()
+}) 
+document.querySelector('.gs').addEventListener('click', sfun=()=>{
+ let sound = document.getElementById('G#');
+ sound.play()
+}) 
+document.querySelector('.as').addEventListener('click', sfun=()=>{
+ let sound = document.getElementById('A#');
+ sound.play()
+}) 
+document.querySelector('.scs').addEventListener('click', sfun=()=>{
+ let sound = document.getElementById('C2#');
+ sound.play()
+}) 
+document.querySelector('.sds').addEventListener('click', sfun=()=>{
+ let sound = document.getElementById('D2#');
+ sound.play()
+})  
+</script>
+</body>
+</html>
